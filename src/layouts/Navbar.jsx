@@ -11,14 +11,20 @@ import { Cross as Hamburger } from 'hamburger-react';
 import PropTypes from 'prop-types';
 import BurgerMenu from './menu/BurgerMenu';
 import theme from 'styles/theme';
+import RollingPen from 'lottie/RollingPen';
+import Lottie from 'react-lottie';
 
+const defaultOptions = {
+  loop: false,
+  autoplay: true,
+  animationData: RollingPen,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
 const useStyles = makeStyles((theme) => ({
   container: {
-    border: '3px solid green',
-  },
-  titleContainer: {
-    paddingLeft: '1rem',
-    border: '3px solid red',
+    color: theme.palette.primary.main,
   },
 }));
 
@@ -34,10 +40,20 @@ const Navbar = (props) => {
       justify='space-between'
       className={styles.container}
     >
-      <Grid item container justify='flex-start' xs={10} md={6} lg={8}>
-        <Typography className={styles.titleContainer} variant='subtitle1'>
-          Traderly.
-        </Typography>
+      <Grid
+        item
+        container
+        justify='flex-start'
+        direction='row'
+        alignItems='center'
+        xs={10}
+        md={6}
+        lg={8}
+      >
+        <Box p={0} m={0}>
+          <Lottie options={defaultOptions} height={50} width={50} />
+        </Box>
+        <Typography variant='subtitle1'>Traderly.</Typography>
       </Grid>
       <Grid
         xs={2}

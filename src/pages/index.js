@@ -9,10 +9,10 @@ export default function Home() {
 
 
       <Navbar />
-      <main  >
-        {/* <LandingPage /> */}
+      {/*  <main   >
+        <LandingPage />
 
-      </main>
+      </main> */}
 
     </div>
   )
