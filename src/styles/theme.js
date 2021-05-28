@@ -3,17 +3,25 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#3bbf0e',
+            main: '#26CD86',
         },
         secondary: {
-            main: '#ffffff',
+            main: '#2AC4B8',
         },
+        tertiary: {
+            main: '#1B193E'
+        }
     },
     typography: {
-        subtitle1: {
+        h1: {
             fontFamily: 'Montserrat',
-            fontWeight: 600,
+            fontWeight: 550,
             fontSize: 24
+        },
+        subtitle1: {
+            fontFamily: 'Raleway',
+            fontWeight: 400,
+            fontSize: 18
         },
     }
 });

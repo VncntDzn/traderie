@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Box, Typography, makeStyles } from '@material-ui/core';
+import { Grid, Box, Typography, makeStyles, Button } from '@material-ui/core';
 import Image from 'next/image';
 import Lottie from 'react-lottie';
 import ExcelCloud from 'lottie/ExcelCloud';
@@ -28,6 +28,9 @@ const LandingPage = (props) => {
       >
         <h1>Keep track of your trades.</h1>
         <p>Makes you a little wiser. Get more profit.</p>
+        <Button>Get Started</Button>
+        {/* TODO: SHOULD BE AN ACHOR TAG TO ABOUT PAGE */}
+        <Button>Know More</Button>
       </Grid>
       <Grid container item lg={8}>
         <Lottie options={defaultOptions} height={600} width={600} />

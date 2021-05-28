@@ -6,6 +6,7 @@ import {
   makeStyles,
   Box,
   Hidden,
+  Button,
 } from '@material-ui/core';
 import { Cross as Hamburger } from 'hamburger-react';
 import PropTypes from 'prop-types';
@@ -25,6 +26,10 @@ const defaultOptions = {
 const useStyles = makeStyles((theme) => ({
   container: {
     color: theme.palette.primary.main,
+    border: '3px solid red',
+    [theme.breakpoints.up('md')]: {
+      padding: '0 5rem',
+    },
   },
 }));
 
@@ -37,7 +42,7 @@ const Navbar = (props) => {
       container
       item
       alignItems='center'
-      justify='space-between'
+      justify='space-evenly'
       className={styles.container}
     >
       <Grid
@@ -46,22 +51,38 @@ const Navbar = (props) => {
         justify='flex-start'
         direction='row'
         alignItems='center'
-        xs={10}
-        md={6}
-        lg={8}
+        lg={2}
+        xs={9}
+        style={{ border: '3px solid red' }}
       >
         <Box p={0} m={0}>
           <Lottie options={defaultOptions} height={50} width={50} />
         </Box>
-        <Typography variant='subtitle1'>Traderly.</Typography>
+        <Typography variant='h1'>TRADERLY.</Typography>
       </Grid>
+
+      <Hidden mdDown>
+        <Grid
+          item
+          container
+          direction='row'
+          alignItems='center'
+          lg={8}
+          justify='space-evenly'
+          style={{ border: '3px solid red', padding: '0 20rem' }}
+        >
+          <Typography>Home</Typography>
+          <Typography>About</Typography>
+          <Typography>Contact</Typography>
+        </Grid>
+      </Hidden>
       <Grid
-        xs={2}
-        lg={4}
         container
         item
         justify='space-around'
         direction='row'
+        lg={2}
+        xs={3}
         style={{ border: '3px solid red' }}
       >
         <Hidden mdUp>
@@ -74,10 +95,14 @@ const Navbar = (props) => {
           </Box>
         </Hidden>
         <Hidden mdDown>
-          <Typography>Home</Typography>
-          <Typography>About</Typography>
-          <Typography>Signin/Signup</Typography>
-          <Typography>Contact</Typography>
+          <Button>Signup</Button>
+          <Button
+            color='primary'
+            variant='contained'
+            style={{ color: 'white', borderRadius: 8 }}
+          >
+            Signin
+          </Button>
         </Hidden>
       </Grid>
 
