@@ -7,16 +7,18 @@ import {
   Box,
   Hidden,
 } from '@material-ui/core';
-import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
-import PropTypes from 'prop-types';
 import { Cross as Hamburger } from 'hamburger-react';
+import PropTypes from 'prop-types';
 import BurgerMenu from './menu/BurgerMenu';
 import theme from 'styles/theme';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     border: '3px solid green',
-    fontFamily: theme.typography.h1,
+  },
+  titleContainer: {
+    paddingLeft: '1rem',
+    border: '3px solid red',
   },
 }));
 
@@ -32,8 +34,10 @@ const Navbar = (props) => {
       justify='space-between'
       className={styles.container}
     >
-      <Grid xs={10} lg={8} item style={{ border: '3px solid blue' }}>
-        <Typography variant='subtitle1'>Traderly.</Typography>
+      <Grid item container justify='flex-start' xs={10} md={6} lg={8}>
+        <Typography className={styles.titleContainer} variant='subtitle1'>
+          Traderly.
+        </Typography>
       </Grid>
       <Grid
         xs={2}

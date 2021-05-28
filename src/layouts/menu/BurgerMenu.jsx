@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: 'red',
-    width: '60vw',
+    width: '70vw',
     height: '100vh',
     position: 'absolute',
     top: 0,
@@ -17,7 +17,14 @@ const BurgerMenu = ({ open }) => {
   return (
     <>
       {open && (
-        <motion.div animate={{ x: 100 }} className={styles.container}>
+        <motion.div
+          className={styles.container}
+          initial={{ x: 0 }}
+          animate={{ x: 10 }}
+          transition={{
+            x: { type: 'spring', stiffness: 20 },
+          }}
+        >
           <h1>Hello</h1>
         </motion.div>
       )}
