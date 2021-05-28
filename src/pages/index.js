@@ -16,7 +16,9 @@ export default function Home() {
 
       <Navbar />
       <main  >
-        <h1>Vincent</h1>
+        <h1>Keep track of your trades.</h1>
+        <p>Makes you a little wiser. Get more profit.</p>
+
       </main>
 
     </div>

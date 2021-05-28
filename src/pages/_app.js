@@ -1,8 +1,16 @@
 import '../styles/globals.css'
 import 'normalize.css'
+import theme from 'styles/theme';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import { ThemeProvider, CssBaseline, } from '@material-ui/core';
+
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 export default MyApp
