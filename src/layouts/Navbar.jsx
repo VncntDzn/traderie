@@ -25,11 +25,15 @@ const defaultOptions = {
 };
 const useStyles = makeStyles((theme) => ({
   container: {
-    color: theme.palette.primary.main,
-    border: '3px solid red',
+    marginTop: '0.6rem',
     [theme.breakpoints.up('md')]: {
       padding: '0 5rem',
     },
+  },
+  titleContainer: {
+    color: theme.palette.primary.main,
+    fontSize: 'clamp(1rem, 5vw, 2rem)',
+    fontWeight: '600',
   },
 }));
 
@@ -53,12 +57,13 @@ const Navbar = (props) => {
         alignItems='center'
         lg={2}
         xs={9}
-        style={{ border: '3px solid red' }}
       >
         <Box p={0} m={0}>
           <Lottie options={defaultOptions} height={50} width={50} />
         </Box>
-        <Typography variant='h1'>TRADERLY.</Typography>
+        <Typography className={styles.titleContainer} variant='h1'>
+          Traderly.
+        </Typography>
       </Grid>
 
       <Hidden mdDown>
@@ -69,7 +74,7 @@ const Navbar = (props) => {
           alignItems='center'
           lg={8}
           justify='space-evenly'
-          style={{ border: '3px solid red', padding: '0 20rem' }}
+          style={{ padding: '0 20vw' }}
         >
           <Typography>Home</Typography>
           <Typography>About</Typography>
@@ -83,7 +88,7 @@ const Navbar = (props) => {
         direction='row'
         lg={2}
         xs={3}
-        style={{ border: '3px solid red' }}
+        style={{}}
       >
         <Hidden mdUp>
           <Box zIndex={1}>

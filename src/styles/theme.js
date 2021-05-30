@@ -10,13 +10,16 @@ const theme = createMuiTheme({
         },
         tertiary: {
             main: '#1B193E'
+        },
+        quarternary: {
+            main: "#FFFFFF"
         }
     },
     typography: {
         h1: {
             fontFamily: 'Montserrat',
             fontWeight: 550,
-            fontSize: 24
+            fontSize: 22
         },
         subtitle1: {
             fontFamily: 'Raleway',
