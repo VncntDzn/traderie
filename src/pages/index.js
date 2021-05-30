@@ -17,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main className={styles.container}>
         <LandingPage />
+        <LandingPage />
       </main>
     </>
   )
