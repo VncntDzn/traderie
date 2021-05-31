@@ -2,8 +2,7 @@ import React from 'react';
 import { useScrollTrigger } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-const ElevationScroll = (props) => {
-  const { children, window } = props;
+const ElevationScroll = ({ children, window }) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -15,6 +14,8 @@ const ElevationScroll = (props) => {
   });
 };
 
-ElevationScroll.propTypes = {};
+ElevationScroll.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default ElevationScroll;
