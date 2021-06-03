@@ -15,6 +15,7 @@ const defaultOptions = {
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    backgroundColor: 'white',
     padding: '10vh 2rem',
     [theme.breakpoints.up('md')]: {
       padding: '0 5rem',
