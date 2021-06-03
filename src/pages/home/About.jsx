@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'row',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '40rem 5rem',
+      padding: '40rem 10rem',
     },
   },
   titleContainer: {
