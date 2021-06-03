@@ -16,28 +16,19 @@ const BurgerLinks = () => {
     const [toggle, setToggle] = useState(false);
     return (
         <>
-            <Grid
-                container
-                item
-                justify='space-around'
-                direction='row'
-                lg={2}
-                xs={3}
-            >
-                <Hidden mdUp>
-                    <Box zIndex={1}>
-                        <Hamburger
-                            size={22}
-                            toggled={toggle}
-                            toggle={() => setToggle(!toggle)}
-                        />
-                    </Box>
-                </Hidden>
-                <Hidden mdDown>
-                    <Button>Signup</Button>
-                    <Button className={styles.signinBackground}>Signin</Button>
-                </Hidden>
-            </Grid>
+            <Hidden mdUp>
+                <Box zIndex={1}>
+                    <Hamburger
+                        size={22}
+                        toggled={toggle}
+                        toggle={() => setToggle(!toggle)}
+                    />
+                </Box>
+            </Hidden>
+            <Hidden mdDown>
+                <Button>Signup</Button>
+                <Button className={styles.signinBackground}>Signin</Button>
+            </Hidden>
             <BurgerMenu open={toggle} />
         </>
     )

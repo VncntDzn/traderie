@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
   container: {
     margin: '0 0.6rem',
     [theme.breakpoints.up('md')]: {
+      padding: '0 2rem',
+    },
+    [theme.breakpoints.up('lg')]: {
       padding: '0 5rem',
     },
   },
@@ -42,7 +45,17 @@ const Navbar = (props) => {
             >
               <Title />
               <LinksNavigation />
-              <BurgerLinks />
+
+              <Grid
+                container
+                item
+                justify='space-around'
+                direction='row'
+                lg={2}
+                xs={2}
+              >
+                <BurgerLinks />
+              </Grid>
             </Grid>
           </Toolbar>
         </AppBar>

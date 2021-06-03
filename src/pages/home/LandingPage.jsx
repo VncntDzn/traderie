@@ -1,12 +1,4 @@
-import {
-  Grid,
-  Box,
-  Typography,
-  makeStyles,
-  Button,
-  Hidden,
-} from '@material-ui/core';
-import PropTypes from 'prop-types';
+import { Grid, Box, Typography, makeStyles, Button } from '@material-ui/core';
 import Image from 'next/image';
 import Lottie from 'react-lottie';
 import Chart from 'lottie/Chart';
@@ -22,6 +14,30 @@ const defaultOptions = {
 };
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    border: '3px solid red',
+    [theme.breakpoints.up('lg')]: {
+      padding: '0 2rem',
+    },
+  },
+  sloganContainer: {
+    [theme.breakpoints.up('lg')]: {
+      height: '50vh',
+    },
+  },
+  svgContainer: {
+    display: 'flex',
+    alignSelf: 'center',
+    zIndex: -1,
+    top: '15%',
+    position: 'absolute',
+    [theme.breakpoints.up('md')]: {
+      top: '5%',
+    },
+    [theme.breakpoints.up('lg')]: {
+      top: '10%',
+    },
+  },
   headerText: {
     fontFamily: theme.typography.subtitle1.fontFamily,
     fontSize: 'clamp(1rem, 5vw, 2.5rem)',
@@ -33,16 +49,18 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: theme.typography.subtitle1.fontFamily,
   },
 }));
-const LandingPage = (props) => {
+const LandingPage = () => {
   const styles = useStyles();
   return (
-    <Grid container item direction='row'>
+    <Grid className={styles.container} container item direction='row'>
       <Grid
+        className={styles.sloganContainer}
         container
         item
+        md={6}
         lg={5}
         direction='column'
-        alignItems='flex-start'
+        alignItems='center'
         justify='center'
       >
         <Typography className={styles.headerText}>
@@ -55,19 +73,15 @@ const LandingPage = (props) => {
         <Button variant='outlined' color='primary'>
           Know More
         </Button>
-        <Box position='absolute' zIndex={-1} top={150} left={20} bottom={0}>
+        <Box className={styles.svgContainer}>
           <Image src={Circle} height={500} width={500} />
         </Box>
       </Grid>
-      <Hidden mdDown>
-        <Grid container item lg={7}>
-          <Lottie options={defaultOptions} height={600} width={600} />
-        </Grid>
-      </Hidden>
+      <Grid container item md={6} lg={7}>
+        <Lottie options={defaultOptions} height={'auto'} width={'auto'} />
+      </Grid>
     </Grid>
   );
 };
-
-LandingPage.propTypes = {};
 
 export default LandingPage;

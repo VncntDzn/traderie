@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: '10vh 2rem',
     [theme.breakpoints.up('md')]: {
-      padding: '0 8rem',
+      padding: '0 5rem',
     },
   },
 }));
