@@ -1,19 +1,9 @@
-import {
-  Grid,
-  makeStyles,
-  Box,
-  Hidden,
-  Button,
-  AppBar,
-  Toolbar,
-} from '@material-ui/core';
+import { Grid, makeStyles, AppBar, Toolbar } from '@material-ui/core';
 import { BurgerLinks, LinksNavigation, Title } from './nav-links';
 import ElevationScroll from './ElevationScroll';
-import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    margin: '0 0.6rem',
     [theme.breakpoints.up('md')]: {
       padding: '0 2rem',
     },
@@ -40,7 +30,7 @@ const Navbar = (props) => {
               container
               item
               alignItems='center'
-              justify='space-evenly'
+              justify='space-between'
               className={styles.container}
             >
               <Title />
@@ -64,7 +54,4 @@ const Navbar = (props) => {
     </>
   );
 };
-
-Navbar.propTypes = {};
-
 export default Navbar;

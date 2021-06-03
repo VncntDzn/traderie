@@ -1,25 +1,19 @@
 import { Navbar } from 'layouts';
-import { makeStyles } from '@material-ui/core';
 import LandingPage from 'pages/home/LandingPage';
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: '10vh 2rem',
-    [theme.breakpoints.up('md')]: {
-      padding: '0 5rem',
-    },
-  },
-}));
+import About from 'pages/home/About'
+import Waves from 'pages/home/svg/waves.svg'
 
 export default function Home() {
-  const styles = useStyles();
 
   return (
     <>
       <Navbar />
-      <main className={styles.container}>
+      <main >
         <LandingPage />
+        <img alt="waves" src={Waves} />
+        <About />
       </main>
+
     </>
   )
 }

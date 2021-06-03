@@ -14,7 +14,7 @@ const defaultOptions = {
 const useStyles = makeStyles((theme) => ({
   titleContainer: {
     color: theme.palette.primary.main,
-    fontSize: 'clamp(1rem, 5vw, 2rem)',
+    fontSize: 'clamp(1.3rem, 5vw, 2rem)',
     fontWeight: '600',
   },
 }));
