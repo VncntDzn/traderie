@@ -1,4 +1,10 @@
-import { Grid, Typography, makeStyles, Button } from '@material-ui/core';
+import {
+  Grid,
+  Typography,
+  makeStyles,
+  Button,
+  Hidden,
+} from '@material-ui/core';
 import { motion } from 'framer-motion';
 import Lottie from 'react-lottie';
 import Chart from 'lottie/Chart';
@@ -93,15 +99,17 @@ const LandingPage = () => {
             variant='outlined'
             color='primary'
             endIcon={<ArrowDownwardIcon />}
-            style={{ marginTop: 10 }}
+            style={{ margin: '1rem 0' }}
           >
             Know More
           </Button>
         </motion.div>
       </Grid>
-      <Grid container item md={6} lg={7}>
-        <Lottie options={defaultOptions} height='100%' width='80%' />
-      </Grid>
+      <Hidden xsDown>
+        <Grid container item md={6} lg={7}>
+          <Lottie options={defaultOptions} height='100%' width='70%' />
+        </Grid>
+      </Hidden>
     </Grid>
   );
 };

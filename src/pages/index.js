@@ -5,15 +5,8 @@ import About from 'pages/home/About'
 import Waves from 'pages/home/svg/waves.svg'
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    backgroundColor: 'white',
-    padding: '10vh 2rem',
-    position: 'relative',
-    [theme.breakpoints.up('md')]: {
-      padding: '0 5rem',
-    },
-  },
   wavesContainer: {
+    backgroundColor: 'white',
     position: 'absolute'
   }
 }));
