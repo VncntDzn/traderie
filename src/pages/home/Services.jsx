@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     width: 'fit-content',
     height: 'fit-content',
   },
-  aboutUs: {
+  services: {
     fontFamily: theme.typography.subtitle1.fontFamily,
     fontSize: 'clamp(1.1rem, 5vw, 1.5rem)',
     textIndent: '1.5rem',
@@ -53,17 +53,14 @@ const Services = () => {
           >
             Features
           </Typography>
-          <Typography className={styles.aboutUs}>
-            Traderly is an e-trading journal where its users can share their
-            journal publicly or privately. Basically, Traderly is like any other
-            social media platform but for trading only.
+          <Typography className={styles.services}>
+            Traderly is still underdevelopment. In the near future more features
+            and services will be added to Traderly.
           </Typography>
         </Box>
       </Grid>
     </Grid>
   );
 };
-
-Services.propTypes = {};
 
 export default Services;
