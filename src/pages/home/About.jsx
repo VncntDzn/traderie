@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '20vh',
 
     [theme.breakpoints.up('md')]: {
-      padding: '20rem 5rem',
+      padding: '20rem 5rem 0 5rem',
       display: 'flex',
       flexDirection: 'row',
     },

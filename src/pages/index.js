@@ -5,6 +5,7 @@ import LandingPage from 'pages/home/LandingPage';
 import About from 'pages/home/About'
 import Waves from 'pages/home/svg/waves.svg'
 import Services from 'pages/home/Services'
+import FAQs from './home/FAQs';
 
 const useStyles = makeStyles((theme) => ({
   wavesContainer: {
@@ -24,6 +25,7 @@ export default function Home() {
         <img className={styles.wavesContainer} alt="waves" src={Waves} />
         <About />
         <Services />
+        <FAQs />
       </main>
 
     </>
