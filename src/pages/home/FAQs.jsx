@@ -1,6 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 import {
   Grid,
   Accordion,
@@ -14,7 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: 'white',
-    padding: '0 2rem',
+    padding: '5rem 2rem',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -22,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       padding: '0 10rem',
       alignItems: 'center',
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingBottom: '5rem',
     },
   },
   faqContainer: {

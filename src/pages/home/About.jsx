@@ -50,7 +50,7 @@ const About = () => {
       <Grid container item md={5}>
         <Box>
           <Typography className={styles.titleContainer} variant='h1'>
-            About{' '}
+            About {''}
             <span color='primary' style={{ color: '#26CD86' }}>
               Traderly.
             </span>
