@@ -41,13 +41,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     padding: '10rem 2rem',
     [theme.breakpoints.up('sm')]: {
-      padding: '15rem 2rem',
+      paddingTop: '25vh',
     },
-    [theme.breakpoints.up('md')]: {
-      padding: '20rem 2rem',
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: '35rem 2rem',
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '20rem',
     },
   },
   large: {
@@ -59,8 +56,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    flexWrap: 'wrap',
-
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     },

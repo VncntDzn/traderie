@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: 'red',
-    width: '70vw',
-    height: '100vh',
+    backdropFilter: 'blur(4px)',
     position: 'absolute',
+    border: '3px solid red',
+    width: '100vw',
+    height: '100vh',
     top: 0,
-    right: 0,
+    right: 10,
   },
 }));
 const BurgerMenu = ({ open }) => {
@@ -25,7 +26,15 @@ const BurgerMenu = ({ open }) => {
             x: { type: 'spring', stiffness: 20 },
           }}
         >
-          <h1>Hello</h1>
+          <Box
+            style={{
+              backgroundColor: 'rgba(0,0,0, 0.3)',
+              marginTop: '-1.2rem',
+              height: '100vh',
+            }}
+          >
+            <h1>Hello</h1>
+          </Box>
         </motion.div>
       )}
     </>
