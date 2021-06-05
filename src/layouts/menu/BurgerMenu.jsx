@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
-import { Grid, Box, Typography, makeStyles } from '@material-ui/core';
+import { Box, makeStyles, Button } from '@material-ui/core';
+
+import { CustomTypography } from 'components';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     backdropFilter: 'blur(4px)',
     position: 'absolute',
-    border: '3px solid red',
     width: '100vw',
     height: '100vh',
     top: 0,
@@ -27,13 +28,21 @@ const BurgerMenu = ({ open }) => {
           }}
         >
           <Box
+            display='flex'
+            flexDirection='column'
+            justifyContent='center'
+            alignItems='center'
+            height='100vh'
             style={{
-              backgroundColor: 'rgba(0,0,0, 0.3)',
-              marginTop: '-1.2rem',
-              height: '100vh',
+              backgroundColor: 'rgba(0,0,0, 0.2)',
             }}
           >
-            <h1>Hello</h1>
+            <CustomTypography fontSize={18} fontWeight={600} text='Home' />
+            <CustomTypography fontSize={18} fontWeight={600} text='About' />
+            <CustomTypography fontSize={18} fontWeight={600} text='Contact' />
+            <hr style={{ width: '90vw' }} />
+            <Button>Signup</Button>
+            <Button>Signin</Button>
           </Box>
         </motion.div>
       )}
