@@ -58,7 +58,10 @@ const LandingPage = () => {
             trades.
           </span>
         </Typography>
-        <Typography variant='subtitle1'>
+        <Typography
+          variant='subtitle1'
+          style={{ fontSize: 'clamp(1.2rem, 5vw, 1.4rem)' }}
+        >
           Makes you a little wiser. Get more profit.
         </Typography>
 

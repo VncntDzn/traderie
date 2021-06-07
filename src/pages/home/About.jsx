@@ -15,13 +15,11 @@ const defaultOptions = {
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: 'white',
-    padding: '0 2rem',
-    paddingTop: '20vh',
-
+    padding: '20vh 2rem',
     [theme.breakpoints.up('md')]: {
-      padding: '20rem 5rem 0 5rem',
       display: 'flex',
       flexDirection: 'row',
+      paddingBottom: '0',
     },
     [theme.breakpoints.up('lg')]: {
       padding: '35rem 10rem 0 10rem',
@@ -29,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutUs: {
     fontFamily: theme.typography.subtitle1.fontFamily,
-    fontSize: 'clamp(1.1rem, 5vw, 1.5rem)',
+    fontSize: 'clamp(1.1rem, 5vw, 1.4rem)',
     textIndent: '1.5rem',
     textAlign: 'justify',
     textJustify: 'inter-word',
