@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Grid, Hidden, Box, Button, makeStyles } from '@material-ui/core';
+import { Hidden, Box, Button, makeStyles } from '@material-ui/core';
 import { Cross as Hamburger } from 'hamburger-react';
 import BurgerMenu from '../menu/BurgerMenu';
 

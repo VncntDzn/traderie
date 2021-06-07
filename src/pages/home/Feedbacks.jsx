@@ -3,12 +3,12 @@ import {
   Typography,
   makeStyles,
   Card,
-  CardContent,
   Box,
   Avatar,
 } from '@material-ui/core';
 import Vincent from './assets/HMI_VD.jpg';
 import AngelaNicole from './assets/AngelaNicole.jpg';
+
 const feedbacks = [
   {
     feedback: 'Simple yet elegant.',
