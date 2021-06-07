@@ -46,7 +46,7 @@ const About = () => {
   const styles = useStyles();
 
   return (
-    <Grid id='about' className={styles.container}>
+    <Grid className={styles.container}>
       <Grid container item md={5}>
         <Box>
           <Typography className={styles.titleContainer} variant='h1'>

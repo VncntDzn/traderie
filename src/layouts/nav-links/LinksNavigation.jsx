@@ -14,8 +14,8 @@ const LinksNavigation = () => {
         style={{ padding: '0 15vw' }}
       >
         <ActiveLink href='/'>Home</ActiveLink>
-        <ActiveLink href='/about'>About</ActiveLink>
-        <ActiveLink href='/contact'>Contact</ActiveLink>
+        <ActiveLink href='/#about'>About</ActiveLink>
+        <ActiveLink href='/#contact'>Contact</ActiveLink>
       </Grid>
     </Hidden>
   );

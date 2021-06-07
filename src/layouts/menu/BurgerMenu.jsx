@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Box, makeStyles, Button } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 
 import { ActiveLink } from 'components';
 import PropTypes from 'prop-types';
@@ -41,8 +41,8 @@ const BurgerMenu = ({ open }) => {
             <ActiveLink href='/about'>About</ActiveLink>
             <ActiveLink href='/contact'>Contact</ActiveLink>
             <hr style={{ width: '90vw' }} />
-            <Button>Signup</Button>
-            <Button>Signin</Button>
+            <ActiveLink href='/sign-in'>Signin</ActiveLink>
+            <ActiveLink href='/sign-up'>Signup</ActiveLink>
           </Box>
         </motion.div>
       )}

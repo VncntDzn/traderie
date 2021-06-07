@@ -88,7 +88,7 @@ const data = [
 const FAQs = (props) => {
   const styles = useStyles();
   return (
-    <Grid className={styles.container}>
+    <Grid id='contact' className={styles.container}>
       <Typography className={styles.faqContainer}>
         Frequently Ask Questions
       </Typography>
