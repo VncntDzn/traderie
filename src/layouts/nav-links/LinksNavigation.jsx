@@ -1,5 +1,5 @@
 import { Grid, Hidden } from '@material-ui/core';
-import { CustomTypography } from 'components';
+import { ActiveLink } from 'components';
 
 const LinksNavigation = () => {
   return (
@@ -13,9 +13,9 @@ const LinksNavigation = () => {
         justify='space-evenly'
         style={{ padding: '0 15vw' }}
       >
-        <CustomTypography fontSize={16} fontWeight={600} text='Home' />
-        <CustomTypography fontSize={16} fontWeight={600} text='About' />
-        <CustomTypography fontSize={16} fontWeight={600} text='Contact' />
+        <ActiveLink href='/'>Home</ActiveLink>
+        <ActiveLink href='/about'>About</ActiveLink>
+        <ActiveLink href='/contact'>Contact</ActiveLink>
       </Grid>
     </Hidden>
   );
