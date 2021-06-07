@@ -39,14 +39,10 @@ const useStyles = makeStyles((theme) => ({
       width: '30vw',
     },
   },
-  titleContainer: {
-    fontWeight: 500,
-    fontFamily: theme.typography.h1.fontFamily,
-    fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-  },
+
   contentStyle: {
     fontFamily: theme.typography.h1.fontFamily,
-    fontSize: '1.1rem',
+    fontSize: '1rem',
     textIndent: '1.5rem',
     textAlign: 'justify',
     textJustify: 'inter-word',
@@ -88,7 +84,7 @@ const data = [
 const FAQs = (props) => {
   const styles = useStyles();
   return (
-    <Grid className={styles.container}>
+    <Grid id='contact' className={styles.container}>
       <Typography className={styles.faqContainer}>
         Frequently Ask Questions
       </Typography>
@@ -99,7 +95,7 @@ const FAQs = (props) => {
             aria-controls='panel2a-content'
             id='panel2a-header'
           >
-            <Typography className={styles.titleContainer}>{title}</Typography>
+            <Typography variant='h1'>{title}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography className={styles.contentStyle}>{content}</Typography>

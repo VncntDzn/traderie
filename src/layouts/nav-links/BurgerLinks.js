@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Grid, Hidden, Box, Button, makeStyles } from '@material-ui/core';
+import { Hidden, Box, Button, makeStyles } from '@material-ui/core';
 import { Cross as Hamburger } from 'hamburger-react';
+import { useRouter } from 'next/router'
 import BurgerMenu from '../menu/BurgerMenu';
 
 
@@ -12,8 +13,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 const BurgerLinks = () => {
-    const styles = useStyles()
+    const styles = useStyles();
+    const router = useRouter();
     const [toggle, setToggle] = useState(false);
+
     return (
         <>
             <Hidden mdUp>
@@ -27,7 +30,7 @@ const BurgerLinks = () => {
             </Hidden>
             <Hidden mdDown>
                 <Button>Signup</Button>
-                <Button className={styles.signinBackground}>Signin</Button>
+                <Button className={styles.signinBackground} onClick={() => router.push('/auth/sign-in')} >Signin</Button>
             </Hidden>
             <BurgerMenu open={toggle} />
         </>

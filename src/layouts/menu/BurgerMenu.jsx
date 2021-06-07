@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Box, makeStyles, Button } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 
-import { CustomTypography } from 'components';
+import { ActiveLink } from 'components';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,12 +37,12 @@ const BurgerMenu = ({ open }) => {
               backgroundColor: 'rgba(0,0,0, 0.2)',
             }}
           >
-            <CustomTypography fontSize={18} fontWeight={600} text='Home' />
-            <CustomTypography fontSize={18} fontWeight={600} text='About' />
-            <CustomTypography fontSize={18} fontWeight={600} text='Contact' />
+            <ActiveLink href='/'>Home</ActiveLink>
+            <ActiveLink href='/about'>About</ActiveLink>
+            <ActiveLink href='/contact'>Contact</ActiveLink>
             <hr style={{ width: '90vw' }} />
-            <Button>Signup</Button>
-            <Button>Signin</Button>
+            <ActiveLink href='/sign-in'>Signin</ActiveLink>
+            <ActiveLink href='/sign-up'>Signup</ActiveLink>
           </Box>
         </motion.div>
       )}

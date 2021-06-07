@@ -1,3 +1,5 @@
-import CustomTypography from './CustomTypography';
 
-export { CustomTypography };
+import ActiveLink from './ActiveLink';
+
+
+export { ActiveLink };

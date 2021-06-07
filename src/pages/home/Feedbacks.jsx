@@ -1,28 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Grid,
-  Accordion,
   Typography,
-  AccordionSummary,
-  AccordionDetails,
   makeStyles,
   Card,
-  CardContent,
   Box,
   Avatar,
 } from '@material-ui/core';
 import Vincent from './assets/HMI_VD.jpg';
+import AngelaNicole from './assets/AngelaNicole.jpg';
 
 const feedbacks = [
   {
-    feedback: 'Traderly will change the trading journal forever!',
-    name: 'Vincent P. Dizon',
-    image: Vincent,
+    feedback: 'Simple yet elegant.',
+    name: 'Angela Nicole',
+    image: AngelaNicole,
   },
   {
     feedback: 'Traderly will change the trading journal forever!',
-    name: 'Vincent P. Dizon',
+    name: 'Vincent',
     image: Vincent,
   },
   {
@@ -56,8 +51,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       flexDirection: 'row',
+      flexWrap: 'wrap',
     },
   },
   cardContentContainer: {
@@ -68,6 +64,8 @@ const useStyles = makeStyles((theme) => ({
     margin: '1rem',
     padding: '1rem',
     borderRadius: '10px',
+    width: '20rem',
+    height: '13rem',
   },
   titleContainer: {
     fontWeight: 600,
