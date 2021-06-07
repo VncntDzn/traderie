@@ -28,13 +28,14 @@ const useStyles = makeStyles((theme) => ({
       padding: '0 5rem',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '0 2rem',
+      padding: '0 8rem',
     },
   },
   headerText: {
-    fontFamily: theme.typography.subtitle1.fontFamily,
+    fontFamily: 'Raleway',
     fontSize: 'clamp(1.7rem, 5vw, 3.5rem)',
     fontWeight: '600',
+    width: '90%',
   },
 }));
 
