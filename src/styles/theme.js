@@ -26,7 +26,15 @@ const theme = createMuiTheme({
             fontWeight: 400,
             fontSize: 18
         },
-    }
+    },
+    titleContainer: {
+        fontWeight: 600,
+        fontFamily: 'Montserrat',
+        fontSize: 'clamp(1.7rem, 5vw, 2.5rem)',
+        marginBottom: '1rem',
+        width: 'fit-content',
+        height: 'fit-content',
+    },
 });
 
 export default theme;

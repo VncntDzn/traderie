@@ -1,6 +1,7 @@
 import { Grid, Typography, makeStyles, Box } from '@material-ui/core';
 import ExcelCloud from 'lottie/ExcelCloud';
 import Lottie from 'react-lottie';
+import theme from 'styles/theme';
 
 const defaultOptions = {
   loop: true,
@@ -26,14 +27,6 @@ const useStyles = makeStyles((theme) => ({
       padding: '35rem 10rem 0 10rem',
     },
   },
-  titleContainer: {
-    fontWeight: 700,
-    fontFamily: theme.typography.h1.fontFamily,
-    fontSize: 'clamp(1.7rem, 5vw, 2.5rem)',
-    marginBottom: '1rem',
-    width: 'fit-content',
-    height: 'fit-content',
-  },
   aboutUs: {
     fontFamily: theme.typography.subtitle1.fontFamily,
     fontSize: 'clamp(1.1rem, 5vw, 1.5rem)',
@@ -49,7 +42,7 @@ const About = () => {
     <Grid id='about' className={styles.container}>
       <Grid container item md={5}>
         <Box>
-          <Typography className={styles.titleContainer} variant='h1'>
+          <Typography style={theme.titleContainer} variant='h1'>
             About {''}
             <span color='primary' style={{ color: '#26CD86' }}>
               Traderly.

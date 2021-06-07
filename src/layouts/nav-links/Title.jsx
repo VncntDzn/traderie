@@ -1,7 +1,6 @@
 import { Grid, Typography, makeStyles, Box } from '@material-ui/core';
 import RollingPen from 'lottie/RollingPen';
 import Lottie from 'react-lottie';
-import PropTypes from 'prop-types';
 
 const defaultOptions = {
   loop: false,

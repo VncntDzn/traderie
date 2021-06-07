@@ -6,6 +6,7 @@ import {
   Hidden,
 } from '@material-ui/core';
 import { motion } from 'framer-motion';
+import { ActiveLink } from 'components';
 import Lottie from 'react-lottie';
 import Chart from 'lottie/Chart';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
@@ -30,34 +31,10 @@ const useStyles = makeStyles((theme) => ({
       padding: '0 2rem',
     },
   },
-  sloganContainer: {
-    [theme.breakpoints.up('lg')]: {
-      paddingLeft: '7vw',
-      height: '65vh',
-    },
-  },
-  svgContainer: {
-    display: 'flex',
-    alignSelf: 'center',
-    zIndex: -1,
-    top: '15%',
-    position: 'absolute',
-    [theme.breakpoints.up('md')]: {
-      top: '5%',
-    },
-    [theme.breakpoints.up('lg')]: {
-      top: '10%',
-    },
-  },
   headerText: {
     fontFamily: theme.typography.subtitle1.fontFamily,
     fontSize: 'clamp(1.7rem, 5vw, 3.5rem)',
     fontWeight: '600',
-  },
-  subtitleText: {
-    fontSize: 'clamp(1rem, 5vw, 1.5rem)',
-    fontWeight: '400',
-    fontFamily: theme.typography.subtitle1.fontFamily,
   },
 }));
 
@@ -66,7 +43,6 @@ const LandingPage = () => {
   return (
     <Grid className={styles.container} container item direction='row'>
       <Grid
-        className={styles.sloganContainer}
         container
         item
         md={6}
@@ -81,10 +57,10 @@ const LandingPage = () => {
             trades.
           </span>
         </Typography>
-        <Typography className={styles.subtitleText}>
+        <Typography variant='subtitle1'>
           Makes you a little wiser. Get more profit.
         </Typography>
-        {/* TODO: SHOULD BE AN ACHOR TAG TO ABOUT PAGE */}
+
         <motion.div
           animate={{ y: 10 }}
           transition={{
@@ -95,14 +71,16 @@ const LandingPage = () => {
             ease: 'easeOut',
           }}
         >
-          <Button
-            variant='outlined'
-            color='primary'
-            endIcon={<ArrowDownwardIcon />}
-            style={{ margin: '1rem 0' }}
-          >
-            Know More
-          </Button>
+          <ActiveLink href='/#about'>
+            <Button
+              variant='outlined'
+              color='primary'
+              endIcon={<ArrowDownwardIcon />}
+              style={{ margin: '1rem 0' }}
+            >
+              Know More
+            </Button>
+          </ActiveLink>
         </motion.div>
       </Grid>
       <Hidden xsDown>
