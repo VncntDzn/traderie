@@ -30,7 +30,7 @@ const BurgerLinks = () => {
             </Hidden>
             <Hidden mdDown>
                 <Button>Signup</Button>
-                <Button className={styles.signinBackground} onClick={() => router.push('/auth/sign-in')} >Signin</Button>
+                <Button className={styles.signinBackground} onClick={() => router.push('/auth/Signin')} >Signin</Button>
             </Hidden>
             <BurgerMenu open={toggle} />
         </>

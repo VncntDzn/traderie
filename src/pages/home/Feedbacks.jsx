@@ -16,13 +16,13 @@ const feedbacks = [
     image: AngelaNicole,
   },
   {
-    feedback: 'Traderly will change the trading journal forever!',
+    feedback: 'Traderly is good!',
     name: 'Vincent',
     image: Vincent,
   },
   {
-    feedback: 'Traderly will change the trading journal forever!',
-    name: 'Vincent P. Dizon',
+    feedback: 'Traderly is innovative!',
+    name: 'Vincent',
     image: Vincent,
   },
 ];

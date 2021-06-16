@@ -3,7 +3,7 @@ import theme from 'styles/theme';
 import { useEffect } from 'react'
 import Head from 'next/head'
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
-
+import MainLayout from 'layouts/MainLayout';
 const MyApp = ({ Component, pageProps }) => {
 
   useEffect(() => {
@@ -24,7 +24,9 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <MainLayout >
+          <Component {...pageProps} />
+        </MainLayout>
       </ThemeProvider>
     </>
   )

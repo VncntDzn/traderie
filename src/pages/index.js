@@ -1,4 +1,3 @@
-import { Navbar } from 'layouts';
 import {
   About,
   FAQs,
@@ -8,7 +7,8 @@ import {
   LandingPage
 } from './home'
 import { makeStyles } from '@material-ui/core';
-import Waves from './home/svg/waves.svg'
+import Waves from './home/svg/waves.svg';
+
 const useStyles = makeStyles((theme) => ({
   wavesContainer: {
     backgroundColor: 'white',
@@ -20,18 +20,15 @@ export default function Home() {
   const styles = useStyles();
 
   return (
-    <>
-      <Navbar />
-      <main >
-        <LandingPage />
-        <img className={styles.wavesContainer} alt="waves" src={Waves} />
-        <About />
-        <Services />
-        <FAQs />
-        <img className={styles.wavesContainer} alt="waves" src={Waves} />
-        <Feedbacks />
-        <Footer />
-      </main>
-    </>
+    <main>
+      <LandingPage />
+      <img className={styles.wavesContainer} alt="waves" src={Waves} />
+      <About />
+      <Services />
+      <FAQs />
+      <img className={styles.wavesContainer} alt="waves" src={Waves} />
+      <Feedbacks />
+
+    </main>
   )
 }
