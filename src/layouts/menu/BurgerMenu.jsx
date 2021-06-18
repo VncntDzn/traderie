@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Box, makeStyles } from '@material-ui/core';
-
 import { ActiveLink } from 'components';
 import PropTypes from 'prop-types';
 
